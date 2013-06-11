@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+
+{% block heading %}
+BLOG
+{% endblock %}
+
+
+{% block paragraph %}
+Here is the Blog.
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+{% if query_results %}
+    <ul>
+    {% for query in query_results %}
+        <li><a href="/{{ query.ID }}/">{{ query.Title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Blog posts are available.</p>
+{% endif %}
+
+{% endblock %}

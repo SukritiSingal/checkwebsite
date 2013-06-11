@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+{% load staticfiles %}
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{% block title %}{% endblock %} </title>
+
+  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}personalwebsite/foundation.css"  />
+  
+
+  <script src="{{ STATIC_URL }}personalwebsite/js/vendor/custom.modernizr.js" ></script>
+  <!--<link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="static/personalwebsite/foundation.css" />-->
+  <!-- If you are using the gem version, you need this only -->
+  <!--<link rel="stylesheet" href="css/app.css" />-->
+
+  <!--<script src="static/personalwebsite/js/vendor/custom.modernizr.js"></script>-->
+</head>
+	
+	<body>
+
+    <div class="button-bar">
+  <ul class="button-group">
+    <li><a href="/aboutme/" class="small button">About Me</a></li>
+    <li><a href="/places/" class="small button">Around The World </a></li>
+    <li><a href="/inspire/" class="small button">Inspirational Quotes </a></li>
+    <li><a href="/futureTech/" class="small button"> Future Tech </a></li>
+    <li><a href="/fav/" class="small button"> Favorite Media Choices </a></li>
+    <li><a href="/blog/" class="small button"> Blog </a></li>
+  </ul>
+		</div>
+
+        <div class="row">
+          <div class="large-12 columns">
+          <h2>{% block heading %}{% endblock %}</h2>
+      
+          <hr />
+          </div>
+      </div>
+			
+		</div>
+		
+		<p>{% block paragraph %}{% endblock %}</p>
+
+	
+		
+			{% block content %}{% endblock %}
+		
+		<!--
+		<div id="footer">
+			<div id="button">
+				<p>Send me an <span class="bold">e-mail</span>!</p>
+			</div>
+		</div> -->
+		<script>
+  	document.write('<script src=' +
+  	('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  	'.js><\/script>')
+  	</script>
+  	<script src="js/foundation/foundation.js"></script>
+  	<script src="js/foundation/foundation.alerts.js"></script>
+  	<script src="js/foundation/foundation.clearing.js"></script>
+  	<script src="js/foundation/foundation.cookie.js"></script>
+  	<script src="js/foundation/foundation.dropdown.js"></script>
+  	<script src="js/foundation/foundation.forms.js"></script>
+  	<script src="js/foundation/foundation.joyride.js"></script>
+  	<script src="js/foundation/foundation.magellan.js"></script>
+  	<script src="js/foundation/foundation.orbit.js"></script>
+  	<script src="js/foundation/foundation.placeholder.js"></script>
+  	<script src="js/foundation/foundation.reveal.js"></script>
+  	<script src="js/foundation/foundation.section.js"></script>
+  	<script src="js/foundation/foundation.tooltips.js"></script>
+  	<script src="js/foundation/foundation.topbar.js"></script>
+  	<script src="js/foundation/foundation.interchange.js"></script>
+  	<script>
+    $(document).foundation();
+  	</script>
+	</body>
+</html>
+

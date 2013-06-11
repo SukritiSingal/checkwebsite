@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+Blog Entry
+{% endblock %}
+
+
+{% block heading %}
+
+Blog Entry
+{% endblock %}
+
+
+{% block paragraph %}
+Here is the Blog Entry.
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<h1>{{ blogentry.Title }}</h1>
+<p>
+{{ blogentry.Content }}
+</p>
+
+{% endblock %}
